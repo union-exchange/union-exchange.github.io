@@ -23,22 +23,22 @@
 /**define( 'DB_NAME', 'database_name_here' );
 
 /** MySQL database username */
-define( 'DB_USER', 'username_here' );
+/** define( 'DB_USER', 'username_here' );*/
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+/** define( 'DB_PASSWORD', 'password_here' );*/
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+/** define( 'DB_HOST', 'localhost' );*/
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+/** define( 'DB_CHARSET', 'utf8' );*/
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' ); */
+/** define( 'DB_COLLATE', '' ); */
 
-if(isset($_ENV[`CLEARDB_DATABASE_URL`])) {
-    $db = parse_url($_ENV['CLEARDB_DATABASE_URL']);
+if(isset($_ENV['https://www.cleardb.com/dashboard?source=OEU5NTc4MEZERDBCOTlFQjdBOTg0REREMjM5MEQ2ODI=&nav-data=eyJhcHBuYW1lIjoidW5pb24tZXhjaGFuZ2UiLCJhZGRvbiI6IkNsZWFyREIgTXlTUUwgSWduaXRlIiwiYWRkb25zIjpbeyJjdXJyZW50Ijp0cnVlLCJpY29uIjoiaHR0cHM6Ly9hZGRvbnMuaGVyb2t1LmNvbS9wcm92aWRlci9hZGRvbnMvY2xlYXJkYi9pY29ucy9tZW51L3Byb2Nlc3NlZC5wbmciLCJzbHVnIjoiY2xlYXJkYjppZ25pdGUiLCJuYW1lIjoiQ2xlYXJEQiBNeVNRTCJ9XX0'])) {
+    $db = parse_url($_ENV['https://www.cleardb.com/dashboard?source=OEU5NTc4MEZERDBCOTlFQjdBOTg0REREMjM5MEQ2ODI=&nav-data=eyJhcHBuYW1lIjoidW5pb24tZXhjaGFuZ2UiLCJhZGRvbiI6IkNsZWFyREIgTXlTUUwgSWduaXRlIiwiYWRkb25zIjpbeyJjdXJyZW50Ijp0cnVlLCJpY29uIjoiaHR0cHM6Ly9hZGRvbnMuaGVyb2t1LmNvbS9wcm92aWRlci9hZGRvbnMvY2xlYXJkYi9pY29ucy9tZW51L3Byb2Nlc3NlZC5wbmciLCJzbHVnIjoiY2xlYXJkYjppZ25pdGUiLCJuYW1lIjoiQ2xlYXJEQiBNeVNRTCJ9XX0']);
     define('DB_NAME', trim($db['heroku_dc68e93a6c6e7d9'],'/'));
     define('DB_USER', $db['user']);
     define('DB_PASSWORD', $db['pass']);
